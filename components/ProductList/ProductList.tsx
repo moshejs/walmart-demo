@@ -3,7 +3,7 @@ import Product from "../Product/Product";
 import "./productList.scss";
 
 const ProductList = ({ products }) => (
-  <div className="productListStyle">
+  <div className="productList">
     {products.map((product, index) => (
       <Product key={index} product={product} />
     ))}

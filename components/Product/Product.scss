@@ -1,6 +1,6 @@
 @import "../../stylesheets/variables.scss";
 
-.productStyle {
+.product {
   padding: 15px 10px 20px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -10,7 +10,7 @@
   }
 }
 
-.imgStyle {
+.productImg {
   width: calc(100% + 20px);
   margin: 0 -0 0 -10px;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.moreBadgeStyle {
+.moreBadge {
   height: 20px;
   border: 2px solid #f6f6f6;
   color: #6d6e71;
@@ -31,14 +31,14 @@
   border-radius: 25px;
 }
 
-.moreBadgeContainerStyle {
+.moreBadgeContainer {
   height: 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.container {
+.priceContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,6 +1,6 @@
 @import "../../stylesheets/variables.scss";
 
-.headerStyle {
+.header {
   height: 80px;
   background-color: $color-purple;
   display: flex;
@@ -38,7 +38,7 @@
   }
 }
 
-.hamburgerStyle {
+.hamburger {
   height: 50%;
 
   @media screen and (min-width: 969px) {
@@ -46,7 +46,7 @@
   }
 }
 
-.logoStyle {
+.logo {
   height: 40%;
 
   @media screen and (min-width: 969px) {

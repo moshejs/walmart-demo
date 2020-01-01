@@ -30,21 +30,21 @@ class Header extends Component<HeaderProps, {}> {
 
   render() {
     return (
-      <div className="headerStyle">
+      <div className="header">
         <img
-          className="hamburgerStyle"
+          className="hamburger"
           src="https://moshejs.github.io/walmart-demo/assets/icons/hamburger.svg"
           onMouseDown={this.handleMouseDown}
         />
 
         <img
-          className="logoStyle"
+          className="logo"
           src="https://moshejs.github.io/walmart-demo/assets/icons/logo.svg"
         />
 
         <nav>
           <a href="#">
-            Toys{" "}
+            Toys
             <img src="https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg" />
           </a>
           <a href="#">Furniture</a>

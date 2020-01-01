@@ -47,35 +47,16 @@ class Dropdown extends Component<any, any> {
         <div className="button" onClick={this.showDropdownMenu}>
           Sort By
         </div>
-        {this.state.displayMenu ? (
+        {this.state.menuOpen ? (
           <div className="dropdownMenu">
             <ul>
-              <li
-                onClick={() =>
-                  this.props.setSortingType(SortingTypes.PRICE_ASC)
-                }
-              >
-                $ - $$$
-              </li>
-              <li
-                onClick={() =>
-                  this.props.setSortingType(SortingTypes.PRICE_DESC)
-                }
-              >
-                $$$ - $
-              </li>
-              <li
-                onClick={() =>
-                  this.props.setSortingType(SortingTypes.TOP_RATED)
-                }
-              >
-                Top Rated
-              </li>
-              <li
-                onClick={() => this.props.setSortingType(SortingTypes.POPULAR)}
-              >
-                Popular
-              </li>
+              {sortList.map((sortItem, index) => (
+                <li
+                  onClick={() => this.props.setSortingType(sortItem.sortType)}
+                >
+                  {sortItem.text}
+                </li>
+              ))}
             </ul>
           </div>
         ) : null}
