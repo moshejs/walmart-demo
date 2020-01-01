@@ -357,7 +357,7 @@ function (_Component) {
         __self: this
       }, __jsx("img", {
         className: "hamburgerStyle",
-        src: "assets/icons/hamburger.svg",
+        src: "https://moshejs.github.io/walmart-demo/assets/icons/hamburger.svg",
         onMouseDown: this.handleMouseDown,
         __source: {
           fileName: _jsxFileName,
@@ -366,7 +366,7 @@ function (_Component) {
         __self: this
       }), __jsx("img", {
         className: "logoStyle",
-        src: "assets/icons/logo.svg",
+        src: "https://moshejs.github.io/walmart-demo/assets/icons/logo.svg",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
@@ -386,7 +386,7 @@ function (_Component) {
         },
         __self: this
       }, "Toys ", __jsx("img", {
-        src: "assets/icons/nav_active.svg",
+        src: "https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 45
@@ -686,12 +686,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
-var menuStyle = {
-  backgroundColor: '#041E42',
-  height: '100vh',
-  width: '100vw',
-  zIndex: 999
-};
 var hamburgerStyle = {
   height: '50%'
 };
@@ -736,10 +730,10 @@ function (_Component) {
     key: "render",
     value: function render() {
       return __jsx("div", {
-        style: menuStyle,
+        className: "mobileMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 33
         },
         __self: this
       }, __jsx("div", {
@@ -752,58 +746,58 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 34
         },
         __self: this
       }, __jsx("img", {
         style: hamburgerStyle,
-        src: "assets/icons/hamburger_close.svg",
+        src: "https://moshejs.github.io/walmart-demo/assets/icons/hamburger_close.svg",
         onMouseDown: this.handleMouseDown,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 39
         },
         __self: this
       })), __jsx("nav", {
         className: "mobileMenuNav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 47
         },
         __self: this
       }, __jsx("a", {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 48
         },
         __self: this
       }, "Toys ", __jsx("img", {
-        src: "assets/icons/nav_active.svg",
+        src: "https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 48
         },
         __self: this
       })), __jsx("a", {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 49
         },
         __self: this
       }, "Furniture"), __jsx("a", {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 50
         },
         __self: this
       }, "Food"), __jsx("a", {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 51
         },
         __self: this
       }, "Health")));
@@ -13811,8 +13805,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Layout/Layout */ "./components/Layout/Layout.tsx");
 /* harmony import */ var _components_Hero_Hero__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Hero/Hero */ "./components/Hero/Hero.tsx");
 /* harmony import */ var _components_ProductList_SortedProductList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ProductList/SortedProductList */ "./components/ProductList/SortedProductList.tsx");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles.scss */ "./styles.scss");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../stylesheets/styles.scss */ "./stylesheets/styles.scss");
+/* harmony import */ var _stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_stylesheets_styles_scss__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_MobileMenu_Menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/MobileMenu/Menu */ "./components/MobileMenu/Menu.tsx");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../store */ "./store.tsx");
 /* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Head */ "./components/Head.tsx");
@@ -14015,8 +14009,7 @@ var fetchProducts = function fetchProducts() {
       }
     }, null, null, [[0, 8]]);
   };
-};
-console.log(productsSlice); //   const { getProducts } = productsSlice.actions
+}; //   const { getProducts } = productsSlice.actions
 
 var sortingSlice = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__["createSlice"])({
   name: 'Sorts',
@@ -14051,8 +14044,8 @@ function initializeStore(initialState) {
     reducer: rootReducer,
     middleware: [redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__["getDefaultMiddleware"])())),
     preloadedState: initialState
-  }); // if (process.env.NODE_ENV !== 'production' && module.hot) {
-  //     module.hot.accept('./reducers', () => store.replaceReducer(rootReducer))
+  }); // if (process.env.NODE_ENV !== 'production' && (module as any).hot) {
+  //     (module as any).hot.accept('./reducers', () => store.replaceReducer(rootReducer))
   // }
 
   return store;
