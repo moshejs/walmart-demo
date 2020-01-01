@@ -255,11 +255,11 @@ li:last-child:hover {
 
 @font-face {
   font-family: 'BogleWeb-Regular';
-  src: url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Regular.woff2") format("woff2"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Regular.woff") format("woff"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Regular.eot") format("embedded-opentype"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Regular.ttf") format("truetype"); }
+  src: url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Regular.woff2") format("woff2"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Regular.woff") format("woff"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Regular.eot") format("embedded-opentype"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'BogleWeb-Bold';
-  src: url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Bold.woff2") format("woff2"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Bold.woff") format("woff"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Bold.eot") format("embedded-opentype"), url("https://moshejs.github.io/walmart-demo/fonts/BogleWeb-Bold.ttf") format("truetype"); }
+  src: url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Bold.woff2") format("woff2"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Bold.woff") format("woff"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Bold.eot") format("embedded-opentype"), url("https://moshejs.github.io/walmart-demo/assets/fonts/BogleWeb-Bold.ttf") format("truetype"); }
 
 html {
   background-color: #E6E7E8; }
@@ -314,5 +314,3 @@ nav.mobileMenuNav {
     .mobileMenu {
       display: none; } }
 
-
-/*# sourceMappingURL=styles.chunk.css.map*/

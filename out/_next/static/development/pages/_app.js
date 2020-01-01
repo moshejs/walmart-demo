@@ -1353,7 +1353,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /*!*****************************************************************!*\
   !*** ./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js ***!
   \*****************************************************************/
-/*! exports provided: createNextState, createSelector, configureStore, createAction, createReducer, createSerializableStateInvariantMiddleware, createSlice, findNonSerializableValue, getDefaultMiddleware, getType, isPlain, __DO_NOT_USE__ActionTypes, applyMiddleware, bindActionCreators, combineReducers, compose, createStore */
+/*! exports provided: __DO_NOT_USE__ActionTypes, applyMiddleware, bindActionCreators, combineReducers, compose, createStore, createNextState, createSelector, configureStore, createAction, createReducer, createSerializableStateInvariantMiddleware, createSlice, findNonSerializableValue, getDefaultMiddleware, getType, isPlain */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15580,18 +15580,17 @@ function (_App) {
           Component = _this$props.Component,
           pageProps = _this$props.pageProps,
           reduxStore = _this$props.reduxStore;
-      console.log(Component, pageProps, reduxStore);
       return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_9__["Provider"], {
         store: reduxStore,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         },
         __self: this
       }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 11
         },
         __self: this
       })));
@@ -15709,8 +15708,7 @@ var fetchProducts = function fetchProducts() {
       }
     }, null, null, [[0, 8]]);
   };
-};
-console.log(productsSlice); //   const { getProducts } = productsSlice.actions
+}; //   const { getProducts } = productsSlice.actions
 
 var sortingSlice = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__["createSlice"])({
   name: 'Sorts',
@@ -15745,8 +15743,8 @@ function initializeStore(initialState) {
     reducer: rootReducer,
     middleware: [redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_3__["getDefaultMiddleware"])())),
     preloadedState: initialState
-  }); // if (process.env.NODE_ENV !== 'production' && module.hot) {
-  //     module.hot.accept('./reducers', () => store.replaceReducer(rootReducer))
+  }); // if (process.env.NODE_ENV !== 'production' && (module as any).hot) {
+  //     (module as any).hot.accept('./reducers', () => store.replaceReducer(rootReducer))
   // }
 
   return store;
