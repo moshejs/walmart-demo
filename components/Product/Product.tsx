@@ -2,17 +2,17 @@ import ImgBadge from "../ImgBadge";
 import "./product.scss";
 
 const Product = ({ product }) => (
-  <div className="productStyle">
-    <div className="moreBadgeContainerStyle">
+  <div className="product">
+    <div className="moreBadgeContainer">
       {product.more_choices && (
-        <div className="moreBadgeStyle">More Choices</div>
+        <div className="moreBadge">More Choices</div>
       )}
     </div>
 
-    <img src={product.image_url} className="imgStyle" />
+    <img src={product.image_url} className="productImg" />
     {product.type && <ImgBadge itemType={product.type} />}
 
-    <div className="container">
+    <div className="priceContainer">
       <div className="itemName">{product.name}</div>
       <div className="originalPrice">{product.original_price}</div>
     </div>

@@ -4,13 +4,32 @@ import "./Dropdown.scss";
 import { setSortingType, SortingTypes } from "../../store";
 import { connect } from "react-redux";
 
-// interface AppState {
-//   menuVisible: boolean
-// }
+interface DropdownState {
+  menuOpen: boolean;
+}
 
-// interface HeaderProps {
-//   cartItems: number
-// }
+interface DropdownProps {
+  setSortingType: any;
+}
+
+const sortList = [
+  {
+    text: "$ - $$$",
+    sortType: SortingTypes.PRICE_ASC
+  },
+  {
+    text: "$$$ - $",
+    sortType: SortingTypes.PRICE_DESC
+  },
+  {
+    text: "Top Rated",
+    sortType: SortingTypes.TOP_RATED
+  },
+  {
+    text: "Popular",
+    sortType: SortingTypes.POPULAR
+  }
+];
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -19,24 +38,24 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class Dropdown extends Component<any, any> {
+class Dropdown extends Component<DropdownProps, DropdownState> {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      displayMenu: false
+      menuOpen: false
     };
   }
 
   showDropdownMenu = event => {
     event.preventDefault();
-    this.setState({ displayMenu: true }, () => {
+    this.setState({ menuOpen: true }, () => {
       document.addEventListener("click", this.hideDropdownMenu);
     });
   };
 
   hideDropdownMenu = () => {
-    this.setState({ displayMenu: false }, () => {
+    this.setState({ menuOpen: false }, () => {
       document.removeEventListener("click", this.hideDropdownMenu);
     });
   };
