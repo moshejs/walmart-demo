@@ -7,7 +7,7 @@ import Hero from '../components/Hero/Hero';
 import SortedProductList from '../components/ProductList/SortedProductList';
 
 
-import '../styles.scss'
+import '../stylesheets/styles.scss'
 
 import Menu from '../components/MobileMenu/Menu';
 import { fetchProducts } from '../store';

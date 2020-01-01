@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../stylesheets/variables.scss';
 
 .productStyle {
     padding: 15px 10px 20px;
@@ -49,9 +49,6 @@
   font-size: 14px;
   color: $color-blue;
   line-height: 28px;
-  // @media screen and (min-width: 969px) {
-  //   font-size: 14px;
-  // }
 }
 
 .itemDescription {
@@ -61,7 +58,6 @@
 
   @media screen and (min-width: 969px) {
     width: unset;
-    // font-size: 14px;
   }
 }
 

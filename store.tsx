@@ -123,9 +123,9 @@ export function initializeStore(initialState: RootState) {
         preloadedState: initialState
     })
 
-    // if (process.env.NODE_ENV !== 'production' && module.hot) {
-    //     module.hot.accept('./reducers', () => store.replaceReducer(rootReducer))
-    // }
+    if (process.env.NODE_ENV !== 'production' && (module as any).hot) {
+        (module as any).hot.accept('./reducers', () => store.replaceReducer(rootReducer))
+    }
 
     return store
 
