@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 class MyApp extends App<any, any> {
   render() {
     const { Component, pageProps, reduxStore } = this.props
-    console.log(Component, pageProps, reduxStore)
     return (
       <Provider store={reduxStore}>
         <Component {...pageProps} />

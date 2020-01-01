@@ -71,8 +71,6 @@ export const {
     }
 }
 
-  console.log(productsSlice)
-
 //   const { getProducts } = productsSlice.actions
 
 
