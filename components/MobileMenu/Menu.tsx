@@ -3,13 +3,6 @@ import { toggleMobileMenu } from "../../store";
 import { connect } from "react-redux";
 import './Menu.scss';
 
-const menuStyle = {
-    backgroundColor: '#041E42',
-    height: '100vh',
-    width: '100vw',
-    zIndex: 999,
-};
-
 const hamburgerStyle = {
     height: '50%'
 }
@@ -37,14 +30,14 @@ class Menu extends Component<any, HeaderProps> {
 
     render() {
         return (
-        <div style={menuStyle}>
+        <div className="mobileMenu">
             <div style={{height: '80px', padding: '0 15px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between' }}>
                     
                 <img style={hamburgerStyle} 
-                        src="assets/icons/hamburger_close.svg" 
+                        src="https://moshejs.github.io/walmart-demo/assets/icons/hamburger_close.svg" 
                         onMouseDown={this.handleMouseDown}  /> 
 
 
@@ -52,7 +45,7 @@ class Menu extends Component<any, HeaderProps> {
 
 
             <nav className="mobileMenuNav">
-                <a href="#">Toys <img src="assets/icons/nav_active.svg" /></a>
+                <a href="#">Toys <img src="https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg" /></a>
                 <a href="#">Furniture</a>
                 <a href="#">Food</a>
                 <a href="#">Health</a>

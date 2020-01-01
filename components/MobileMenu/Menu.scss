@@ -18,3 +18,15 @@ nav.mobileMenuNav {
     
     }
 }
+
+.mobileMenu {
+    background-color: #041E42;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    display: block;
+
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
