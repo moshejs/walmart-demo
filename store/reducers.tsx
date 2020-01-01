@@ -1,14 +1,11 @@
-import thunkMiddleware, { ThunkAction } from "redux-thunk";
+import { ThunkAction } from "redux-thunk";
 import {
-  configureStore,
-  getDefaultMiddleware,
   createSlice,
   Action,
   combineReducers,
   PayloadAction
 } from "@reduxjs/toolkit";
-
-import { getProducts } from "./api/walmartAPI";
+import { getProducts } from "../api/walmartAPI";
 
 export const SortingTypes = {
   NONE: "NONE",
@@ -28,13 +25,13 @@ interface ProductsState {
 }
 
 const ProductsInitialState: ProductsState = {
-  currentProducts: [],
-  siteTitle: "",
-  sectionTitle: "",
-  cart: 0,
-  isLoading: null,
-  error: null
-};
+    currentProducts: [],
+    siteTitle: "",
+    sectionTitle: "",
+    cart: 0,
+    isLoading: null,
+    error: null
+  };
 
 // REDUCERS
 const productsSlice = createSlice({
@@ -51,8 +48,6 @@ const productsSlice = createSlice({
       state.sectionTitle = section_title;
       state.cart = cart.quantity;
       state.isLoading = false;
-
-      // state.error = null
     },
     getProductsError(state, action) {
       state.isLoading = false;
@@ -106,24 +101,10 @@ const mobileMenuSlice = createSlice({
 export const { toggleMobileMenu } = mobileMenuSlice.actions;
 
 // ROOT REDUCER
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   products: productsSlice.reducer,
   sortType: sortingSlice.reducer,
   mobileMenuVisible: mobileMenuSlice.reducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
-
-export function initializeStore(initialState: RootState) {
-  const store = configureStore({
-    reducer: rootReducer,
-    middleware: [thunkMiddleware, ...getDefaultMiddleware()],
-    preloadedState: initialState
-  });
-
-  // if (process.env.NODE_ENV !== 'production' && (module as any).hot) {
-  //     (module as any).hot.accept('./reducers', () => store.replaceReducer(rootReducer))
-  // }
-
-  return store;
-}

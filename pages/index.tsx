@@ -1,15 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { fetchProducts } from "../store/reducers";
+
+import Head from "../components/Head";
+import Menu from "../components/MobileMenu/Menu";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import SortedProductList from "../components/ProductList/SortedProductList";
 
 import "../stylesheets/styles.scss";
-
-import Menu from "../components/MobileMenu/Menu";
-import { fetchProducts } from "../store";
-import Head from "../components/Head";
 
 class Index extends React.Component<any, any> {
   static async getInitialProps({ reduxStore }) {

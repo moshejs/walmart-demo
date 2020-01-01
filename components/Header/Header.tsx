@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./Header.scss";
 import { connect } from "react-redux";
-import { toggleMobileMenu } from "../../store";
+import { toggleMobileMenu } from "../../store/reducers";
 
 interface HeaderProps {
   cartItems: number;

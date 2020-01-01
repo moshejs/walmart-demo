@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import { toggleMobileMenu } from "../../store";
+import { toggleMobileMenu } from "../../store/reducers";
 import { connect } from "react-redux";
-import './Menu.scss';
-
-const hamburgerStyle = {
-  height: "50%"
-};
+import "./Menu.scss";
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -37,7 +33,7 @@ class Menu extends Component<any, HeaderProps> {
           }}
         >
           <img
-            style={hamburgerStyle}
+            className="hamburger"
             src="https://moshejs.github.io/walmart-demo/assets/icons/hamburger_close.svg"
             onMouseDown={this.handleMouseDown}
           />

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./Dropdown.scss";
-import { setSortingType, SortingTypes } from "../../store";
+import { setSortingType, SortingTypes } from "../../store/reducers";
 import { connect } from "react-redux";
 
 interface DropdownState {

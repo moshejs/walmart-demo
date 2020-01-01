@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { createSelector } from "@reduxjs/toolkit";
 import ProductList from "./ProductList";
-import { SortingTypes } from "../../store";
+import { SortingTypes } from "../../store/reducers";
 
 const selectProducts = state => state.products.currentProducts;
 const selectSortType = state => state.sortType;
