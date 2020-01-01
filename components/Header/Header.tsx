@@ -34,15 +34,15 @@ handleMouseDown = (e: any) => {
     return (
       <div className='headerStyle'>
                     <img className='hamburgerStyle'
-                  src="assets/icons/hamburger.svg" 
+                  src="https://moshejs.github.io/walmart-demo/assets/icons/hamburger.svg" 
                   onMouseDown={this.handleMouseDown} />
 
-        <img className='logoStyle' src="assets/icons/logo.svg" />
+        <img className='logoStyle' src="https://moshejs.github.io/walmart-demo/assets/icons/logo.svg" />
   
   
         
          <nav>
-          <a href="#">Toys <img src="assets/icons/nav_active.svg" /></a>
+          <a href="#">Toys <img src="https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg" /></a>
           <a href="#">Furniture</a>
           <a href="#">Food</a>
           <a href="#">Health</a>
