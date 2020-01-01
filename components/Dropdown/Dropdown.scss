@@ -1,72 +1,70 @@
-@import '../../stylesheets/variables.scss';
+@import "../../stylesheets/variables.scss";
 
 .dropdown {
-    position: relative;
-    // display: inline-block;
-    height: 70px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-sizing: border-box;
-    position: relative;
-    bottom: -260px;
-    margin: 0 15px;
-    padding: 15px 30px;
+  position: relative;
+  // display: inline-block;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  bottom: -260px;
+  margin: 0 15px;
+  padding: 15px 30px;
 
-    @media screen and (min-width: 1200px) {
-        width: 232px;
-        margin-left: auto;
-        margin-right: 50px;
-    }
-
+  @media screen and (min-width: 1200px) {
+    width: 232px;
+    margin-left: auto;
+    margin-right: 50px;
+  }
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    top:65px;
-    right:0px;
-    width: 100%;
-    background-color: #FFFFFF;
-    font-weight:bold;
-    position: absolute;
-    border-radius: 0 0 8px 8px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 65px;
+  right: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  border-radius: 0 0 8px 8px;
 
-    box-shadow: 0px 15px 13px -3px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  box-shadow: 0px 15px 13px -3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 li {
-    font-family: 'BogleWeb-Regular';
-    padding: 30px 30px;
+  font-family: "BogleWeb-Regular";
+  padding: 30px 30px;
 
-    @media screen and (min-width: 1200px) {
-        padding: 20px 30px;
-    }
+  @media screen and (min-width: 1200px) {
+    padding: 20px 30px;
+  }
 }
 
 li:last-child {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 li:hover {
-    background-color: $color-light-grey;
+  background-color: $color-light-grey;
 }
 
-li:last-child:hover  {
-    border-radius: 0 0 8px 8px;
+li:last-child:hover {
+  border-radius: 0 0 8px 8px;
 }
-.button{
-    font-family: 'BogleWeb-Bold';
-    line-height: 40px;
-    color: $color-purple;
+.button {
+  font-family: "BogleWeb-Bold";
+  line-height: 40px;
+  color: $color-purple;
 }
-.button:before{
-    content:"";
-    position:absolute;
-    width:0px;
-    height:0px;
-    border: 10px solid;
-    border-color: $color-purple transparent transparent transparent;
-    right: 15px;
-    top: 30px;
+.button:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 10px solid;
+  border-color: $color-purple transparent transparent transparent;
+  right: 15px;
+  top: 30px;
 }

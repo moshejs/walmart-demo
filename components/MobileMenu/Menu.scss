@@ -1,32 +1,31 @@
 nav.mobileMenuNav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 45%;
-    height: 30%;
-    margin: 0 auto;
-    a {
-        display: block;
-        font-family: 'BogleWeb-Bold';
-        font-size: 12px;
-        letter-spacing: 1.5px;
-        line-height: 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  height: 30%;
+  margin: 0 auto;
+  a {
+    display: block;
+    font-family: "BogleWeb-Bold";
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
 
 .mobileMenu {
-    background-color: #041E42;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999;
-    display: block;
+  background-color: #041e42;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  display: block;
 
-    @media screen and (min-width: 769px) {
-        display: none;
-    }
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 }

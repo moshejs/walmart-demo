@@ -1,7 +1,6 @@
-  
-import axios from 'axios';
+import axios from "axios";
 
-const pageUrl = 'https://pf-pets.azurewebsites.net/dog_toys';
+const pageUrl = "https://pf-pets.azurewebsites.net/dog_toys";
 
 // export interface Post {
 //   userId: number;
@@ -14,8 +13,7 @@ const pageUrl = 'https://pf-pets.azurewebsites.net/dog_toys';
 //   posts: Post[]
 // }
 
-
-export async function getProducts()  {
-  const  { data }  = await axios.get<any[]>(pageUrl);
+export async function getProducts() {
+  const { data } = await axios.get<any[]>(pageUrl);
   return data;
 }

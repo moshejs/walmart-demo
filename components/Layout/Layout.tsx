@@ -4,13 +4,13 @@ import './Layout.scss';
 
 const mapStateToProps = state => ({
   mobileMenuVisible: state.mobileMenuVisible
-})
-  
+});
+
 const Layout = props => (
-    <div className={props.mobileMenuVisible ? 'menuOpen' : 'menuClosed'}>
+  <div className={props.mobileMenuVisible ? "menuOpen" : "menuClosed"}>
     <Header />
     {props.children}
   </div>
 );
-  
+
 export default connect(mapStateToProps)(Layout);
