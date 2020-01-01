@@ -1,12 +1,10 @@
-import ImgBadge from "../ImgBadge";
-import "./product.scss";
+import ImgBadge from '../ImgBadge'
+import './product.scss'
 
 const Product = ({ product }) => (
   <div className="product">
     <div className="moreBadgeContainer">
-      {product.more_choices && (
-        <div className="moreBadge">More Choices</div>
-      )}
+      {product.more_choices && <div className="moreBadge">More Choices</div>}
     </div>
 
     <img src={product.image_url} className="productImg" />
@@ -19,12 +17,12 @@ const Product = ({ product }) => (
     <div className="priceContainer">
       <div className="itemDescription">{product.description}</div>
       <div className="price">
-        <span className={product.original_price ? "discountPrice" : "price"}>
+        <span className={product.original_price ? 'discountPrice' : 'price'}>
           {product.price}
         </span>
       </div>
     </div>
   </div>
-);
+)
 
-export default Product;
+export default Product

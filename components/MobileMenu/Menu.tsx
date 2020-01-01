@@ -1,35 +1,35 @@
-import React, { Component } from "react";
-import { toggleMobileMenu } from "../../store/reducers";
-import { connect } from "react-redux";
-import "./Menu.scss";
+import React, { Component } from 'react'
+import { toggleMobileMenu } from '../../store/reducers'
+import { connect } from 'react-redux'
+import './Menu.scss'
 
 const mapDispatchToProps = dispatch => {
   return {
     // dispatching actions returned by action creators
     toggleMobileMenu: () => dispatch(toggleMobileMenu())
-  };
-};
+  }
+}
 
 interface HeaderProps {
-  toggleMobileMenu: any;
+  toggleMobileMenu: any
 }
 
 class Menu extends Component<any, HeaderProps> {
   handleMouseDown = (e: any) => {
-    this.props.toggleMobileMenu();
-    e.stopPropagation();
-  };
+    this.props.toggleMobileMenu()
+    e.stopPropagation()
+  }
 
   render() {
     return (
       <div className="mobileMenu">
         <div
           style={{
-            height: "80px",
-            padding: "0 15px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between"
+            height: '80px',
+            padding: '0 15px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between'
           }}
         >
           <img
@@ -41,7 +41,7 @@ class Menu extends Component<any, HeaderProps> {
 
         <nav className="mobileMenuNav">
           <a href="#">
-            Toys{" "}
+            Toys{' '}
             <img src="https://moshejs.github.io/walmart-demo/assets/icons/nav_active.svg" />
           </a>
           <a href="#">Furniture</a>
@@ -49,8 +49,8 @@ class Menu extends Component<any, HeaderProps> {
           <a href="#">Health</a>
         </nav>
       </div>
-    );
+    )
   }
 }
 
-export default connect(null, mapDispatchToProps)(Menu);
+export default connect(null, mapDispatchToProps)(Menu)

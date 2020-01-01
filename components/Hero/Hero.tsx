@@ -1,5 +1,5 @@
-import "./Hero.scss";
-import Dropdown from "../Dropdown/Dropdown";
+import './Hero.scss'
+import Dropdown from '../Dropdown/Dropdown'
 
 const Hero = props => (
   <div className="heroContainer">
@@ -9,6 +9,6 @@ const Hero = props => (
     </div>
     <Dropdown />
   </div>
-);
+)
 
-export default Hero;
+export default Hero

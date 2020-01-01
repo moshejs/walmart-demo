@@ -1,32 +1,32 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import "./Header.scss";
-import { connect } from "react-redux";
-import { toggleMobileMenu } from "../../store/reducers";
+import './Header.scss'
+import { connect } from 'react-redux'
+import { toggleMobileMenu } from '../../store/reducers'
 
 interface HeaderProps {
-  cartItems: number;
-  toggleMobileMenu: any;
+  cartItems: number
+  toggleMobileMenu: any
 }
 
-const mapStateToProps = state => ({ cartItems: state.products.cart });
+const mapStateToProps = state => ({ cartItems: state.products.cart })
 
 const mapDispatchToProps = dispatch => {
   return {
     // dispatching actions returned by action creators
     toggleMobileMenu: () => dispatch(toggleMobileMenu())
-  };
-};
+  }
+}
 
 class Header extends Component<HeaderProps, {}> {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
   }
 
   handleMouseDown = (e: any) => {
-    this.props.toggleMobileMenu();
-    e.stopPropagation();
-  };
+    this.props.toggleMobileMenu()
+    e.stopPropagation()
+  }
 
   render() {
     return (
@@ -56,8 +56,8 @@ class Header extends Component<HeaderProps, {}> {
           </div>
         </nav>
       </div>
-    );
+    )
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

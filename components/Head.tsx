@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { useSelector } from "react-redux";
+import Head from 'next/head'
+import { useSelector } from 'react-redux'
 
 export default () => {
-  const siteTitle = useSelector((state: any) => state.products.siteTitle);
+  const siteTitle = useSelector((state: any) => state.products.siteTitle)
 
   return (
     <Head>
@@ -13,5 +13,5 @@ export default () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
       />
     </Head>
-  );
-};
+  )
+}

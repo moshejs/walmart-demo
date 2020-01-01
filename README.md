@@ -40,7 +40,7 @@ Deploys the application to GitHub Pages.
 
 ## Retrospective
 
-Some ways to improve this application:
+Some ways to improve this application + process:
 
 1. Routing - because I was only given one page, I dediced to do away with using a router, and as a result the navigation links are static and don't work.
 
@@ -50,6 +50,4 @@ Some ways to improve this application:
 
 4. Provide inspection link for InVision - I was able to eyeball most of the CSS. Having it would have improved my efficiency
 
-5. Refactor store.js
-
-6. Add unit tests
+5. Add unit tests

@@ -1,4 +1,4 @@
-@import "../../stylesheets/variables.scss";
+@import '../../stylesheets/variables.scss';
 
 .dropdown {
   position: relative;
@@ -34,7 +34,7 @@ ul {
 }
 
 li {
-  font-family: "BogleWeb-Regular";
+  font-family: 'BogleWeb-Regular';
   padding: 30px 30px;
 
   @media screen and (min-width: 1200px) {
@@ -54,12 +54,12 @@ li:last-child:hover {
   border-radius: 0 0 8px 8px;
 }
 .button {
-  font-family: "BogleWeb-Bold";
+  font-family: 'BogleWeb-Bold';
   line-height: 40px;
   color: $color-purple;
 }
 .button:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0px;
   height: 0px;

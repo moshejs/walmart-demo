@@ -1,64 +1,64 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import "./Dropdown.scss";
-import { setSortingType, SortingTypes } from "../../store/reducers";
-import { connect } from "react-redux";
+import './Dropdown.scss'
+import { setSortingType, SortingTypes } from '../../store/reducers'
+import { connect } from 'react-redux'
 
 interface DropdownState {
-  menuOpen: boolean;
+  menuOpen: boolean
 }
 
 interface DropdownProps {
-  setSortingType: any;
+  setSortingType: any
 }
 
 const sortList = [
   {
-    text: "$ - $$$",
+    text: '$ - $$$',
     sortType: SortingTypes.PRICE_ASC
   },
   {
-    text: "$$$ - $",
+    text: '$$$ - $',
     sortType: SortingTypes.PRICE_DESC
   },
   {
-    text: "Top Rated",
+    text: 'Top Rated',
     sortType: SortingTypes.TOP_RATED
   },
   {
-    text: "Popular",
+    text: 'Popular',
     sortType: SortingTypes.POPULAR
   }
-];
+]
 
 const mapDispatchToProps = dispatch => {
   return {
     // dispatching actions returned by action creators
     setSortingType: type => dispatch(setSortingType(type))
-  };
-};
+  }
+}
 
 class Dropdown extends Component<DropdownProps, DropdownState> {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       menuOpen: false
-    };
+    }
   }
 
   showDropdownMenu = event => {
-    event.preventDefault();
+    event.preventDefault()
     this.setState({ menuOpen: true }, () => {
-      document.addEventListener("click", this.hideDropdownMenu);
-    });
-  };
+      document.addEventListener('click', this.hideDropdownMenu)
+    })
+  }
 
   hideDropdownMenu = () => {
     this.setState({ menuOpen: false }, () => {
-      document.removeEventListener("click", this.hideDropdownMenu);
-    });
-  };
+      document.removeEventListener('click', this.hideDropdownMenu)
+    })
+  }
 
   render() {
     return (
@@ -80,8 +80,8 @@ class Dropdown extends Component<DropdownProps, DropdownState> {
           </div>
         ) : null}
       </div>
-    );
+    )
   }
 }
 
-export default connect(null, mapDispatchToProps)(Dropdown);
+export default connect(null, mapDispatchToProps)(Dropdown)

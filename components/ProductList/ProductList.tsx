@@ -1,6 +1,6 @@
-import React from "react";
-import Product from "../Product/Product";
-import "./productList.scss";
+import React from 'react'
+import Product from '../Product/Product'
+import './productList.scss'
 
 const ProductList = ({ products }) => (
   <div className="productList">
@@ -8,6 +8,6 @@ const ProductList = ({ products }) => (
       <Product key={index} product={product} />
     ))}
   </div>
-);
+)
 
-export default ProductList;
+export default ProductList

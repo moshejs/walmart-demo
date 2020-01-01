@@ -1,110 +1,110 @@
-import { ThunkAction } from "redux-thunk";
+import { ThunkAction } from 'redux-thunk'
 import {
   createSlice,
   Action,
   combineReducers,
   PayloadAction
-} from "@reduxjs/toolkit";
-import { getProducts } from "../api/walmartAPI";
+} from '@reduxjs/toolkit'
+import { getProducts } from '../api/walmartAPI'
 
 export const SortingTypes = {
-  NONE: "NONE",
-  POPULAR: "POPULAR",
-  TOP_RATED: "TOP_RATED",
-  PRICE_ASC: "PRICE_ASC",
-  PRICE_DESC: "PRICE_DESC"
-};
+  NONE: 'NONE',
+  POPULAR: 'POPULAR',
+  TOP_RATED: 'TOP_RATED',
+  PRICE_ASC: 'PRICE_ASC',
+  PRICE_DESC: 'PRICE_DESC'
+}
 
 interface ProductsState {
-  currentProducts: any[];
-  isLoading: boolean;
-  error: string | null;
-  siteTitle: string;
-  sectionTitle: string;
-  cart: number;
+  currentProducts: any[]
+  isLoading: boolean
+  error: string | null
+  siteTitle: string
+  sectionTitle: string
+  cart: number
 }
 
 const ProductsInitialState: ProductsState = {
-    currentProducts: [],
-    siteTitle: "",
-    sectionTitle: "",
-    cart: 0,
-    isLoading: null,
-    error: null
-  };
+  currentProducts: [],
+  siteTitle: '',
+  sectionTitle: '',
+  cart: 0,
+  isLoading: null,
+  error: null
+}
 
 // REDUCERS
 const productsSlice = createSlice({
-  name: "products",
+  name: 'products',
   initialState: ProductsInitialState,
   reducers: {
     getProductsStart(state: ProductsState) {
-      state.isLoading = true;
+      state.isLoading = true
     },
     getProductsSuccess(state: ProductsState, { payload }: PayloadAction<any>) {
-      const { items, site_title, section_title, cart } = payload; // cart too
-      state.currentProducts = items;
-      state.siteTitle = site_title;
-      state.sectionTitle = section_title;
-      state.cart = cart.quantity;
-      state.isLoading = false;
+      const { items, site_title, section_title, cart } = payload // cart too
+      state.currentProducts = items
+      state.siteTitle = site_title
+      state.sectionTitle = section_title
+      state.cart = cart.quantity
+      state.isLoading = false
     },
     getProductsError(state, action) {
-      state.isLoading = false;
+      state.isLoading = false
       // state.error = action.payload;
     }
   }
-});
+})
 
 export const {
   getProductsStart,
   getProductsSuccess,
   getProductsError
-} = productsSlice.actions;
+} = productsSlice.actions
 
 export const fetchProducts = (): AppThunk => async dispatch => {
   try {
-    dispatch(getProductsStart());
-    const res = await getProducts();
-    dispatch(getProductsSuccess(res));
+    dispatch(getProductsStart())
+    const res = await getProducts()
+    dispatch(getProductsSuccess(res))
   } catch (err) {
-    dispatch(getProductsError(err));
+    dispatch(getProductsError(err))
   }
-};
+}
 
 //   const { getProducts } = productsSlice.actions
 
 const sortingSlice = createSlice({
-  name: "Sorts",
+  name: 'Sorts',
   initialState: SortingTypes.NONE,
   reducers: {
     setSortingType(state, action) {
-      return action.payload;
+      return action.payload
     }
   }
-});
+})
 
-export const { setSortingType } = sortingSlice.actions;
+export const { setSortingType } = sortingSlice.actions
 
-export type AppThunk = ThunkAction<void, RootState, null, Action<string>>;
+export type AppThunk = ThunkAction<void, RootState, null, Action<string>>
 
 const mobileMenuSlice = createSlice({
-  name: "mobileMenu",
+  name: 'mobileMenu',
   initialState: false,
   reducers: {
     toggleMobileMenu(state) {
-      return !state;
+      return !state
     }
   }
-});
+})
 
-export const { toggleMobileMenu } = mobileMenuSlice.actions;
+export const { toggleMobileMenu } = mobileMenuSlice.actions
 
 // ROOT REDUCER
 export const rootReducer = combineReducers({
   products: productsSlice.reducer,
   sortType: sortingSlice.reducer,
   mobileMenuVisible: mobileMenuSlice.reducer
-});
+})
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>
