@@ -48,3 +48,9 @@ Some ways to improve this application:
 2. Use Sass %100
 
 3. Separate the cart and page-metadata from the product items. In a real world application, we follow REST practices or use GraphQL. This made the redux store a little awkward to work with.
+
+4. Provide inspection link for InVision - I was able to eyeball most of the CSS. Having it would have improved my efficiency
+
+5. Refactor store.js
+
+6. Add unit tests
