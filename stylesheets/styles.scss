@@ -54,3 +54,21 @@ h2 {
     font-size: 24px;
   }
 }
+
+
+/* Image Assets */
+.hamburger {
+  height: 50%;
+
+  @media screen and (min-width: 969px) {
+    display: none;
+  }
+}
+
+.logo {
+  height: 40%;
+
+  @media screen and (min-width: 969px) {
+    height: 50%;
+  }
+}
