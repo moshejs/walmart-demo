@@ -52,7 +52,7 @@ class Header extends Component<HeaderProps, {}> {
           <a href="#">Health</a>
           <div className="cart">
             <span className="cartQuantity">{this.props.cartItems}</span>
-            <img src="assets/icons/basket.svg" />
+            <img src="https://moshejs.github.io/walmart-demo/assets/icons/basket.svg" />
           </div>
         </nav>
       </div>
