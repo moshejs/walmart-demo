@@ -1,0 +1,77 @@
+@import '../../variables.scss';
+
+.headerStyle {
+    height: 80px;
+    background-color: $color-purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @media screen and (min-width: 969px) {
+        padding: 0 60px;
+    }
+
+    nav {
+    display: flex;
+    a { display: none}
+    @media screen and (min-width: 969px) {
+        justify-content: space-between;
+        width: 45%;
+        a {
+            display: block;
+            font-family: 'BogleWeb-Bold';
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            line-height: 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #FFFFFF;
+         
+
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+  };
+
+.hamburgerStyle {
+  height: 50%;
+
+  @media screen and (min-width: 969px) {
+      display: none;
+  }
+}
+
+.logoStyle {
+  height: 40%;
+
+  @media screen and (min-width: 969px) {
+        height: 50%;
+    }
+}
+
+
+
+.cart {
+    position:relative;
+    display:inline-block;
+    margin-right: 15px;
+
+    img {
+        width: 115%;
+    }
+
+    .cartQuantity {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        background: $color-yellow;
+        border-radius: 20px 20px 20px 20px;
+        color: black;
+        padding: 2px 6px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,104 @@
+@import '../../variables.scss';
+
+.productStyle {
+    padding: 15px 10px 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    @media screen and (min-width: 969px) {
+      padding: 20px 30px 20px;
+  }
+}
+
+.imgStyle {
+    width: calc(100% + 20px);
+    margin: 0 -0 0 -10px;
+
+    @media screen and (min-width: 969px) {
+      width: calc(100% + 60px);
+      margin: 0 -0 0 -30px;
+  }
+}
+
+.moreBadgeStyle {
+    height: 20px;
+    border: 2px solid #F6F6F6;
+    color: #6D6E71;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 20px;
+    border-radius: 25px;
+}
+
+.moreBadgeContainerStyle {
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemName {
+  font-family: 'BogleWeb-Bold';
+  font-size: 14px;
+  color: $color-blue;
+  line-height: 28px;
+  // @media screen and (min-width: 969px) {
+  //   font-size: 14px;
+  // }
+}
+
+.itemDescription {
+  font-size: 14px;
+  color: $color-purple;
+  width: 55%;
+
+  @media screen and (min-width: 969px) {
+    width: unset;
+    // font-size: 14px;
+  }
+}
+
+.priceContainer {
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    .price {
+      font-family: 'BogleWeb-Bold';
+      font-size: 11px;
+      color: $color-purple;
+    
+      @media screen and (min-width: 1200px) {
+          font-size: 14px;
+      }
+    }
+
+    .discountPrice {
+      font-family: 'BogleWeb-Bold';
+      font-size: 11px;
+      color: $color-green;
+    
+      @media screen and (min-width: 1200px) {
+          font-size: 14px;
+      }
+    }
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  align-self: center;
+  justify-self: flex-end;
+  font-size: 11px;
+  color: $color-grey;
+
+  @media screen and (min-width: 1200px) {
+      font-size: 14px;
+  }
+}
+
