@@ -42,9 +42,9 @@ Deploys the application to GitHub Pages.
 
 Some ways to improve this application + process:
 
-1. Routing - because I was only given one page, I dediced to do away with using a router, and as a result the navigation links are static and don't work.
+1. Routing - due to the scope of one page, a router would add more complexity, and as a result the navigation links are static and aren't functional.
 
-2. Use Sass %100
+2. Use Sass 100% of the time to maintain consistency. A style guide for best practices would correct this.
 
 3. Separate the cart and page-metadata from the product items. In a real world application, we follow REST practices or use GraphQL. This made the redux store a little awkward to work with.
 
